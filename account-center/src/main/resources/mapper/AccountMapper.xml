@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="li.jesse.dao.AccountDao">
+    <resultMap id="BaseResultMap" type="li.jesse.entity.Account">
+        <constructor>
+            <idArg column="account_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="account_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="mobile" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="question" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="answer" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="role" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        </constructor>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        account_id, account_name, password, email, mobile, question, answer, role, create_time, update_time
+    </sql>
+
+    <!-- ===== ===== Retrieve ===== ===== -->
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        account
+        WHERE
+        account_id = #{accountId, jdbcType=INTEGER}
+    </select>
+
+    <select id="checkAccountName" parameterType="string" resultType="int">
+        SELECT
+          COUNT(1)
+        FROM
+          account
+        WHERE
+          account_name = #{accountName}
+    </select>
+
+    <select id="checkEmail" resultType="int" parameterType="string">
+        SELECT
+          COUNT(1)
+        FROM
+          account
+        WHERE
+          email = #{email}
+    </select>
+
+    <select id="selectLogin" parameterType="map" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        account
+        WHERE
+        account_name = #{accountName}
+        AND
+        password = #{password}
+    </select>
+
+    <select id="selectQuestionByAccountName" parameterType="string" resultType="string">
+        SELECT
+          question
+        FROM
+          account
+        WHERE
+          accountName = #{accountName}
+    </select>
+
+    <select id="checkAnswer" parameterType="map" resultType="int">
+        SELECT
+          COUNT(1)
+        FROM
+          acount
+        WHERE
+          account_name = #{acountName}
+        AND
+          question = #{question}
+        AND
+          answer = #{answer}
+    </select>
+
+    <select id="checkEmailByAccountId" parameterType="map" resultType="int">
+        SELECT
+          COUNT(1)
+        FROM
+          account
+        WHERE
+          email = #{email}
+        AND
+          account_id != #{accountId}
+    </select>
+
+    <select id="checkPassword" parameterType="map" resultType="int">
+        SELECT
+          COUNT(1)
+        FROM
+          account
+        WHERE
+          account_id = #{accountId}
+        AND
+          password = #{password}
+    </select>
+
+    <!-- ===== ===== Create ===== ===== -->
+    <insert id="insert0" parameterType="string">
+        INSERT INTO
+          tb1(theNo)
+        VALUES
+        ('123abc333')
+    </insert>
+
+    <insert id="insert" parameterType="li.jesse.entity.Account">
+        INSERT INTO
+          account(account_id, account_name, password, email, mobile, question, answer, role, create_time, update_time)
+        VALUES
+        (
+          #(accountId, jdbcType=INTEGER), #(accountName, jdbcType=VARCHAR), #(password, jdbcType=VARCHAR),
+          #(email, jdbcType=VARCHAR), #(mobile, jdbcType=VARCHAR), #(question, jdbcType=VARCHAR), #(answer, jdbcType=VARCHAR),
+          #{role,jdbcType=INTEGER}, now(), now()
+        )
+    </insert>
+
+    <!-- ===== ===== Update ===== ===== -->
+    <update id="updateByPrimaryKey" parameterType="li.jesse.entity.Account">
+        UPDATE
+          account
+        SET
+          account_name = #{accountName, jdbcType=VARCHAR},
+          email = #{email, jdbcType=VARCHAR},
+          mobile = #{mobile,jdbcType=VARCHAR},
+          question = #{question, jdbcType=VARCHAR},
+          answer = #{answer, jdbcType=VARCHAR},
+          role = #{role, jdbcType=INTEGER},
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+          update_time = now()
+        WHERE
+          account_id = #{accountId, jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType="li.jesse.entity.Account">
+        UPDATE
+        account
+        SET
+        <set>
+            <if test="accountName != null">
+                account_name = #{accountName, jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password, jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email, jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="question != null">
+                question = #{question, jdbcType=VARCHAR},
+            </if>
+            <if test="answer != null">
+                answer = #{answer, jdbcType=VARCHAR},
+            </if>
+            <if test="role != null">
+                role = #{role, jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = now()
+            </if>
+        </set>
+        WHERE
+        account_id = #{accountId, jdbcType=INTEGER}
+    </update>
+
+    <!-- ===== ===== Delete ===== ===== -->
+
+</mapper>
