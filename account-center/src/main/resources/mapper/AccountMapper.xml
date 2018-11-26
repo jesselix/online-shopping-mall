@@ -7,10 +7,8 @@
             <idArg column="account_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
             <arg column="account_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="mobile" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="question" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="answer" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="role" jdbcType="INTEGER" javaType="java.lang.Integer"/>
             <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
             <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
@@ -18,17 +16,18 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        account_id, account_name, password, email, mobile, question, answer, role, create_time, update_time
+        account_id, account_name, password, email, mobile, role, create_time, update_time
     </sql>
 
+    <!-- CRUD → RCUD -->
     <!-- ===== ===== Retrieve ===== ===== -->
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         SELECT
-        <include refid="Base_Column_List"/>
+          <include refid="Base_Column_List"/>
         FROM
-        account
+          account
         WHERE
-        account_id = #{accountId, jdbcType=INTEGER}
+          account_id = #{accountId, jdbcType=INTEGER}
     </select>
 
     <select id="checkAccountName" parameterType="string" resultType="int">
@@ -51,35 +50,13 @@
 
     <select id="selectLogin" parameterType="map" resultMap="BaseResultMap">
         SELECT
-        <include refid="Base_Column_List"/>
-        FROM
-        account
-        WHERE
-        account_name = #{accountName}
-        AND
-        password = #{password}
-    </select>
-
-    <select id="selectQuestionByAccountName" parameterType="string" resultType="string">
-        SELECT
-          question
+          <include refid="Base_Column_List"/>
         FROM
           account
         WHERE
-          accountName = #{accountName}
-    </select>
-
-    <select id="checkAnswer" parameterType="map" resultType="int">
-        SELECT
-          COUNT(1)
-        FROM
-          acount
-        WHERE
-          account_name = #{acountName}
+          account_name = #{accountName}
         AND
-          question = #{question}
-        AND
-          answer = #{answer}
+          password = #{password}
     </select>
 
     <select id="checkEmailByAccountId" parameterType="map" resultType="int">
@@ -114,11 +91,11 @@
 
     <insert id="insert" parameterType="li.jesse.entity.Account">
         INSERT INTO
-          account(account_id, account_name, password, email, mobile, question, answer, role, create_time, update_time)
+          account(account_id, account_name, password, email, mobile, role, create_time, update_time)
         VALUES
         (
           #(accountId, jdbcType=INTEGER), #(accountName, jdbcType=VARCHAR), #(password, jdbcType=VARCHAR),
-          #(email, jdbcType=VARCHAR), #(mobile, jdbcType=VARCHAR), #(question, jdbcType=VARCHAR), #(answer, jdbcType=VARCHAR),
+          #(mobile, jdbcType=VARCHAR), #(email, jdbcType=VARCHAR),
           #{role,jdbcType=INTEGER}, now(), now()
         )
     </insert>
@@ -129,10 +106,8 @@
           account
         SET
           account_name = #{accountName, jdbcType=VARCHAR},
-          email = #{email, jdbcType=VARCHAR},
           mobile = #{mobile,jdbcType=VARCHAR},
-          question = #{question, jdbcType=VARCHAR},
-          answer = #{answer, jdbcType=VARCHAR},
+          email = #{email, jdbcType=VARCHAR},
           role = #{role, jdbcType=INTEGER},
           create_time = #{createTime,jdbcType=TIMESTAMP},
           update_time = now()
@@ -142,7 +117,7 @@
 
     <update id="updateByPrimaryKeySelective" parameterType="li.jesse.entity.Account">
         UPDATE
-        account
+          account
         SET
         <set>
             <if test="accountName != null">
@@ -151,17 +126,11 @@
             <if test="password != null">
                 password = #{password, jdbcType=VARCHAR},
             </if>
-            <if test="email != null">
-                email = #{email, jdbcType=VARCHAR},
-            </if>
             <if test="mobile != null">
                 mobile = #{mobile,jdbcType=VARCHAR},
             </if>
-            <if test="question != null">
-                question = #{question, jdbcType=VARCHAR},
-            </if>
-            <if test="answer != null">
-                answer = #{answer, jdbcType=VARCHAR},
+            <if test="email != null">
+                email = #{email, jdbcType=VARCHAR},
             </if>
             <if test="role != null">
                 role = #{role, jdbcType=INTEGER},
@@ -174,7 +143,7 @@
             </if>
         </set>
         WHERE
-        account_id = #{accountId, jdbcType=INTEGER}
+          account_id = #{accountId, jdbcType=INTEGER}
     </update>
 
     <!-- ===== ===== Delete ===== ===== -->
