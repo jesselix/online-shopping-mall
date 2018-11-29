@@ -7,8 +7,8 @@
             <idArg column="account_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
             <arg column="account_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="mobile" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="mobile" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="role" jdbcType="INTEGER" javaType="java.lang.Integer"/>
             <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
             <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
@@ -95,7 +95,7 @@
         VALUES
         (
           #(accountId, jdbcType=INTEGER), #(accountName, jdbcType=VARCHAR), #(password, jdbcType=VARCHAR),
-          #(mobile, jdbcType=VARCHAR), #(email, jdbcType=VARCHAR),
+          #(email, jdbcType=VARCHAR), #(mobile, jdbcType=VARCHAR),
           #{role,jdbcType=INTEGER}, now(), now()
         )
     </insert>
@@ -106,8 +106,8 @@
           account
         SET
           account_name = #{accountName, jdbcType=VARCHAR},
-          mobile = #{mobile,jdbcType=VARCHAR},
           email = #{email, jdbcType=VARCHAR},
+          mobile = #{mobile,jdbcType=VARCHAR},
           role = #{role, jdbcType=INTEGER},
           create_time = #{createTime,jdbcType=TIMESTAMP},
           update_time = now()
@@ -126,11 +126,11 @@
             <if test="password != null">
                 password = #{password, jdbcType=VARCHAR},
             </if>
-            <if test="mobile != null">
-                mobile = #{mobile,jdbcType=VARCHAR},
-            </if>
             <if test="email != null">
                 email = #{email, jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile,jdbcType=VARCHAR},
             </if>
             <if test="role != null">
                 role = #{role, jdbcType=INTEGER},

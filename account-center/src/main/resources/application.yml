@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+#  profiles:
+#    active: prod
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: dbc:mysql://localhost:3306/test?serverTimezone=Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+
+mybatis:
+  typeAliasesPackage: li.jesse.accountcenter.pojo
+  mapperLocations: classpath:mapper/*.xml
