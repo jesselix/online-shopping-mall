@@ -1,4 +1,4 @@
-package li.jesse.mallbackend;
+package li.jesse.mall;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MallBackendApplicationTests {
+public class MallApplicationTests {
 
     @Test
     public void contextLoads() {
