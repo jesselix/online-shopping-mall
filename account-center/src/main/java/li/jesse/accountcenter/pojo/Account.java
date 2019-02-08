@@ -14,13 +14,13 @@ public class Account {
 
     private String email;
 
-    private Short role;
+    private Byte role;
 
     private Date createTime;
 
     private Date updateTime;
 
-    public Account(Integer accountId, String accountName, String password, String mobile, String email, Short role, Date createTime, Date updateTime) {
+    public Account(Integer accountId, String accountName, String password, String mobile, String email, Byte role, Date createTime, Date updateTime) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.password = password;
@@ -75,11 +75,11 @@ public class Account {
         this.email = email;
     }
 
-    public Short getRole() {
+    public Byte getRole() {
         return role;
     }
 
-    public void setRole(Short role) {
+    public void setRole(Byte role) {
         this.role = role;
     }
 
