@@ -1,10 +1,10 @@
-package li.jesse.mall.entity;
+package li.jesse.mall.pojo;
 
 import java.util.Date;
 
-public class SuccessLimitedTimeOffer {
+public class SuccessBargainRush {
 
-    private String SuccessLimitedTimeOfferId;
+    private String bargainRushId;
 
     private String userId;
 
@@ -12,12 +12,12 @@ public class SuccessLimitedTimeOffer {
 
     private Date createTime;
 
-    public String getSuccessLimitedTimeOfferId() {
-        return SuccessLimitedTimeOfferId;
+    public String getBargainRushId() {
+        return bargainRushId;
     }
 
-    public void setSuccessLimitedTimeOfferId(String successLimitedTimeOfferId) {
-        SuccessLimitedTimeOfferId = successLimitedTimeOfferId;
+    public void setBargainRushId(String bargainRushId) {
+        this.bargainRushId = bargainRushId;
     }
 
     public String getUserId() {

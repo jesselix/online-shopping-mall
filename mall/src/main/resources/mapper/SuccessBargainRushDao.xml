@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="li.jesse.mall.dao.SuccessBargainRushDao">
+    <select id="queryByBargainRushId" resultType="SuccessBargainRush">
+        select
+
+        from
+            success_bargain_rush sbr
+        inner join
+            bargain_rush br
+        on
+            sbr.bargain_rush_id = br.bargain_rush_id
+        where
+            sbr.bargain_rush_id = #{BargainRushId}
+
+    </select>
+
+    <insert id="insertSuccessBargainRush">
+        insert ignore into
+            success_bargain_rush(bargain_rush_id, user_id)
+        values
+            (#{}, #{})
+    </insert>
+</mapper>

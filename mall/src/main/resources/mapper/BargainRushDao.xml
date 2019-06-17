@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="li.jesse.mall.dao.BargainRushDao">
+
+    <select id="queryByBargainRushId" resultType="BargainRush" parameterType="long">
+        select
+            *
+        from
+            bargain_rush
+        where
+            bargain_rush_id = #{BargainRushId}
+    </select>
+
+    <select id="queryAll" resultType="BargainRush">
+        select
+            *
+        from
+            bargain_rush
+        order by
+            create_time desc
+        limit
+            #{offset}, #{limit}
+    </select>
+    
+    <update id="reduceInventory">
+        update
+            bargain_rush
+        set
+            inventory = inventory - 1
+        where
+            bargain_rush_id = #{}
+        and
+            start_time <![CDATA[<=]]> #{createTime}
+        and
+            end_time >= #{createTime}
+        and
+            inventory > 0
+    </update>
+
+</mapper>
