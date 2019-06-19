@@ -3,8 +3,8 @@ package li.jesse.mall.util;
 public class SnowflakeIdWorker {
 
     // ==============================Fields===========================================
-    /** 开始时间截 (2019-06-20) */
-    private final long twepoch = 1560686400000L;
+    /** 开始时间截 (2019-06-01 17:00:00) */
+    private final long twepoch = 1559379600000L;
 
     /** 机器id所占的位数 */
     private final long workerIdBits = 5L;
