@@ -1,2 +1,2 @@
 # online-shopping-mall
-Online Shopping Mall
+Demo of an Online Shopping Mall
