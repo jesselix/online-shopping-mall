@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8dd860a-d4cb-4282-8b41-98fb46da7f0a" name="Default Changelist" comment="" />
+    <list default="true" id="d8dd860a-d4cb-4282-8b41-98fb46da7f0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../shopping-mall-account/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-mall-account/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +14,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ea4Os7ROUoCdC7wJeFvkAWCOsv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,6 +23,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Workspaces\projects\shopping-mall\shopping-mall-deal\src\main\java\li\jesse\shoppingmalldeal" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ShoppingMallDealApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -39,7 +48,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594546340251</updated>
+      <workItem from="1594546342911" duration="468000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="859" y="300" key="CommitChangelistDialog2" timestamp="1594546811922">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="859" y="300" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1594546811922" />
   </component>
 </project>

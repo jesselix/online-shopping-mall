@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ad2e2e-5bcc-4bb3-873d-0bd090120093" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/li/jesse/shoppingmallaccount/ShoppingMallAccountApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/li/jesse/shoppingmallaccount/ShoppingMallAccountApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/li/jesse/shoppingmallaccount/ShoppingMallAccountApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/li/jesse/shoppingmallaccount/ShoppingMallAccountApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sql/account.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sql/db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-mall-deal/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/ShoppingMallDealApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/ShoppingMallDealApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/dao/BargainRushDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/dao/SuccessBargainRushDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/pojo/BargainRush.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/pojo/SuccessBargainRush.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/java/li/jesse/shoppingmalldeal/util/SnowflakeIdWorker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/resources/mapper/BargainRushDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/resources/mapper/SuccessBargainRushDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/main/resources/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/test/java/li/jesse/shoppingmalldeal/ShoppingMallDealApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-mall-deal/src/test/java/li/jesse/shoppingmalldeal/ShoppingMallDealApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/src/test/java/li/jesse/shoppingmalldeal/util/SnowflakeIdWorkerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-mall-deal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-mall-deal/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,14 +49,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594546011574</updated>
-      <workItem from="1594546014544" duration="347000" />
+      <workItem from="1594546014544" duration="915000" />
     </task>
+    <task id="LOCAL-00001" summary="+">
+      <created>1594546617510</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594546617510</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+" />
+    <option name="LAST_COMMIT_MESSAGE" value="+" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="538" y="61" width="1195" height="1179" key="CommitChangelistDialog2" timestamp="1594546615497">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="538" y="61" width="1195" height="1179" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1594546615497" />
+    <state x="873" y="438" key="Vcs.Push.Dialog.v2" timestamp="1594546619950">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="438" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1594546619950" />
     <state x="731" y="410" key="new project wizard" timestamp="1594546340200">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
